@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>
+        document
+        </li>
+        <li>
+            window
+        </li>
+    </ul>
+    <script>
+        var firstname = "ashu";//string literal
+        var lastname = "devarala";
+        var number = 10;//number literals
+
+        var person = {
+            firstname : "ashu",
+            lastname : "devarala",
+            salay : 300,
+            location : "pune"
+        }//object literals//JSON
+
+        var marks = [10,20,30,40,50]; //array literals
+
+
+        var firstname = "manjula";
+        var lastname = "devarala";
+        var number = 10;
+
+
+        var marks = [10,80,70,60];
+
+        var person = {
+            firtname : "manjula",
+            lastname : "devarala"
+        }
+
+       var x = [23,34,45,56,68];//array lo unde values ni itterate checukotaniki for loop undi
+       //for objects ki values ni itterate checukotaniki forin loop use chestaru
+        for(let i=0;i<=5;i++){
+            console.log(x[i]);
+        }
+        for(j in person){
+            console.log(j,person[j]);
+        }
+
+        var person =[
+            {
+            firstname : "maha",
+            lastname : "deva",
+            salray : 400,
+            location : "hyderabad"
+        },
+        {
+            firstname : "manju",
+            lastname : "devarala",
+            salray : 500,
+            location : "hyderabad"
+        }
+    ]
+    console.log(person[0]);
+    for (let i=0;i<=person.length;i++){// for array we can use for loop
+        for(j in person[i]){//for object we can use forin loop            
+            console.log(person[i][j]);
+        }
+    }
+
+    console.log(document);//here we can see only html page
+    console.log(window);//here we can see all window realted information 
+    console.dir(document);//for checking functions and all we can seen in document
+    </script>  
+</body>
+</html>

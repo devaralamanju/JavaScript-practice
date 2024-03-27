@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">This is text</p>
+    <button onclick="abc()"> on click</button>
+    <button onmouseover="xyz()"> on mouse over</button>
+    <button onclick="pqr()"> on click</button>
+    <script>
+        function abc(){
+            document.getElementById("demo").style.color = "red";
+        }
+        function pqr(){
+            document.getElementById("demo").style.backgroundColor = "blue";
+        } 
+        function xyz(){
+            document.getElementById("demo").innerHTML = "change new text";
+        }
+    </script>
+</body>
+</html>

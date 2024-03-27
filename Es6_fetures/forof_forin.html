@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="margin-bottom: 20px;">
+        <p>group of values using one name for representing is called <strong>Iterable</strong></p>
+        <p>iterable data types:strings and arrays , objects</p>
+        <p>each element of iterable for using forin or forof we can take</p>
+        <p>forof def:array only values element pointig out </p>
+        <p>Example for forof:array of elements like [12,"23","string"]</p>
+        <p>forof used for array and strings</p>forof loop used for iteraring each element
+        <p>forin def:forin using for values and index finding purpose </p> 
+        <p>forin used for only objects </p>
+        <p>forin using strings:aa element index</p>
+        <p>forin using arrays:aa element index</p>
+        <p>forin using objects:iterating group of key value pairs for objects</p>
+        <p>Example for forin:array of elements like {'100':"xyz",'1002':"pqr",'103':"mno"}</p>
+
+    </div>
+    <script>
+         /**forin and forof loop starts here**/
+         var fruits = ["apple", 'banana', 'grapes', 'orange', 'mango']
+
+         for(x in fruits){
+            document.write(x + "<br>")
+         }  //output:0<br>  
+            // 1<br>
+            //2<br>
+            // 3<br>
+            //4<br>
+
+
+        document.write(fruits)//output:(5) ['apple', 'banana', 'grapes', 'orange', 'mango']
+        for(index in fruits){
+            document.write(index + ":" +fruits[index] + "<br>") 
+        }//output:0:apple<br>
+        //1:banana<br>
+        //2:grapes<br>
+        //3:orange<br>
+        //4:mango<br>
+
+        document.write(fruits + "</br>")//output:5) ['apple', 'banana', 'grapes', 'orange', 'mango']
+
+        for(index = 0;index<=fruits.length;index++){
+            document.write(index + ":" + "fruits[index]")
+        }
+        document.write("<br>");
+
+        /**forin and forof loop ends here**/
+
+        /**forin starts here **/
+        var students = {'100':"xyz",'1002':"pqr",'103':"mno"}
+        for(key in students){
+            document.write(key+":"+students[key]+"<br>")
+        }
+        var str = "India"
+
+        for(i in str){
+            document.write(i+":"+str[i]+"<br>")
+        }
+        /**forin ends here**/
+    </script>
+</body>
+</html>

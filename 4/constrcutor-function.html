@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Employee(fn,ln,a,g,l,q){
+            var firstname = fn;//variable
+            var lastname = ln;
+            this.age = a;//property
+            this.location = l;//property
+            this.getFullName=function(){
+                return this.firstname+this.lastname;
+            }//method
+            this.getAge=function(){
+                return this.age;
+            }
+        }
+        var e1 = new Employee("praveen","gubbala",35,"male","pune","masters");
+        var e2 = new Employee("suresh","gubba",38,"male","hyderabad","btech");
+
+        console.dir(e1);
+        console.dir(e2);
+
+        console.log(e1.getFullName());
+        console.log(e2.getFullName());
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High_order_function</title>
+</head>
+<body>
+    <p><strong>High_order_function def:</strong>High order function is a function that receives another function as argument or return another function or both</p>
+    <script>
+    //syntax of high order function starts here
+    function first(fun){
+        fun()
+    } 
+    function second(){
+        console.log("This is second function")
+    }
+    first(second)
+    //syntax of high order function ends here
+
+    //
+    function first(fun){
+        fun()
+    } 
+    function second(){
+        console.log("This is second function")
+    }
+    first(second);//first is function second is argument of first
+
+    //
+
+    /*var arr = [56,8,7,10,11]
+    arr.map()*/
+    //output:High_order_function.html:33  Uncaught TypeError: undefined is not a function
+    //at Array.map (<anonymous>)
+    //at High_order_function.html:33:9
+    
+    
+    
+    /*var arr = [56,8,7,10,11]
+    arr.map(9)*/
+    //output:Uncaught TypeError: number 9 is not a function
+    //at Array.map (<anonymous>)
+    //at High_order_function.html:41:9
+    
+    var arr = [5,8,7,10,11]
+   
+    function squares(arr){
+        squares = []
+        for(ele of arr){
+            let res = ele*ele
+            squares.push(res)
+        }
+        console.log(squares)
+    }
+    squares(arr)//output:(5) [25, 64, 49, 100, 121] 121]
+    
+
+
+    var arr1 = [5,8,7,10,11]
+   
+    function squaresnew(arr1){
+        squaresnew = []
+        for(ele of arr1){
+            let res = ele*ele
+            squaresnew.push(res)
+        }
+        return squaresnew
+    }
+    let x = squaresnew(arr1)
+    console.log(x)//output:(5) [25, 64, 49, 100, 121]
+    
+    
+    //
+    
+    var arr2 = [5,8,7,10,11]
+   
+    function squaresnewcube(arr2){
+        squaresnewcube = []
+        for(ele of arr2){
+            let res = ele*ele*ele
+            squaresnewcube.push(res)
+        }
+        return squaresnewcube
+    }
+    let y = squaresnewcube(arr2)
+    console.log(y)//output:[125, 512, 343, 1000, 1331]
+    
+    
+    //using high order function 
+
+
+    var arrs = [2,4,5,6,7]
+     function square(num){
+        return num*num
+     }
+     function cube(num){
+        return num*num*num
+     }
+
+    function anyoperator(arrs,operation){
+        let result = []
+        for(ele of arrs){
+            result.push(operation(ele))
+            return result
+        } 
+    }
+
+    let z = anyoperator(arrs,square)
+    console.log(z)//output:
+    </script>
+</body>
+</html>

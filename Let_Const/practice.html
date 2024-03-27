@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo">tell me ypur self?</h1>
+    <button onclick="abc()">click me</button>
+    <button onclick="xyz()">click me</button>
+    <button onmouseover="mouseover()">on mouse over</button>
+    <button onmousedown="mousedown()">onmouse down</button>
+    <button onmouseenter="mouseenter()">on mouse enter</button>
+    <button onmouseleave="mouseleave()">on mouse leave</button>
+    <button onmouseup="mouseup()">on mouse up</button>
+    <button ondblclick="dblclick()">on dblclick</button>
+    <button ondrag="drag()">on drag </button>
+    <button ondragenter="dragenter()">on drag enter</button>
+    <button ondragleave="dragleave()">on drag leave</button>
+    <button ondragend="dragend()">ondragend</button>
+    <button onblur="blur()">onblur</button>
+    <button onabort="abort()">onabort</button>
+    <button oncanplaythrough="canplaythrough()">oncanplaythrough</button>
+    <button oncanplay="canplay()">on canplay</button>
+    <button onmousewheel="mousewheel()">on mouse enter</button>
+    <script>
+          function abc(){
+            document.getElementById("demo").style.color = "red";
+        }
+        function mouseover(){
+            document.getElementById("demo").innerHTML = "mouseover";
+        }
+        function mousedown(){
+            document.getElementById("demo").innerHTML = "on mousedown";
+        }
+        function mouseenter(){
+            document.getElementById("demo").style.color = "mouseenter";
+        }
+        function mouseleave(){
+            document.getElementById("demo").innerHTML = "mouseleave";
+        }
+        function mouseup(){
+            document.getElementById("demo").innerHTML = "mouseup";
+        }
+        function dblclick(){
+            document.getElementById("demo").innerHTML = "click me dblclick";
+        }
+        function drag(){
+            document.getElementById("demo").innerHTML = "drag";
+        }
+        function dragenter(){
+            document.getElementById("demo").style.color = "dragenter";
+        }
+        function mouseleave(){
+            document.getElementById("demo").innerHTML = "mouseleave";
+        }
+        function mouseup(){
+            document.getElementById("demo").innerHTML = "mouseup";
+        }
+        function blur(){
+            document.getElementById("demo").innerHTML = "blur";
+        }
+        function onmousewheel(){
+            document.getElementById("demo").innerHTML = "onmousewheel";
+        }
+    </script>
+</body>
+</html>

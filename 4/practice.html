@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var e1 = {
+            name:"manjula",
+            age : 26,
+            location : "pune",
+            occupation : "btech",
+            experience: 4
+        }//object
+        var e2 = {
+            name:"manju",
+            age : 27,
+            location : "hyderabad",
+            occupation : "btech",
+            experience: 4 
+        }
+
+        function Employee(n,a,l,o,q,e){//arguments
+            this.name = n,
+            this.age =a,
+            this.location = l,
+            this.occupation = o,
+            this.experience = e
+        }//constructor functions
+
+        var emp1 = new Employee("praveen",36,"hyderabad","masters",15);//this are entities
+        var emp2 = new Employee("suresh",36,"pune","masters",12);
+        var emp2 = new Employee("pravena",36,"chennai","masters",13);
+        
+        function student(n,a){
+            var studentname = n ;
+            this.age = a;
+        }
+        
+        var s1 = new student("suresh,a");
+
+        console.log(emp1);
+        console.log(e1);
+    </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type conversion</title>
+</head>
+<body>
+    <p>Type conversion are 2 type</p>
+    <p><strong>Def:</strong>data form to data type conversion is called type conversion.</p>
+    <p>Example:string to number or number to boolean conversions</p>
+    <ul>
+        <li><strong>Implesit conversion(conersion)</strong></li>
+        <li><strong>Explisit conversion:</strong>number,string,boolean</li>
+    </ul>
+
+    <!-- Implesit Conversion starts here-->
+    <script>
+        /** **/
+        document.write(2+"4");//output:24
+        //here 2 is operand and 4 is string but here we using between operator is plus so it treats  plus symbol converts the 2 operands is string
+        //here  2 operands between symbol is plus symbol so 1 inout is number and another input is string so plus symbol treats 2 opernds are strings
+        document.write("</br>");
+        document.write(12+"4");//output:124
+        //here 2 operands are number and string but betwwen plus symbol so it works string
+        document.write("</br>");
+        document.write(12-"4");//output:8
+        //here 2 operands between minus symbol is having so 1 input is number and another input is string so its treats 2 inputs are number so substraction happend
+        document.write("</br>");
+        document.write(12-"s");//output:NaN
+        //
+        document.write("</br>");
+        document.write(12*"4");//output:48
+        document.write("</br>");
+        document.write(12*"s");//output:NaN
+        document.write("</br>");
+        document.write(12*true);//output:12
+        //here boolean true is 1 so output is 12*1 is called 12
+        document.write("</br>");
+        document.write(12*false);//output:0
+        //here boolean false is 0 so output is 12*0 is called 0
+        document.write("</br>");
+        document.write(12+true);//output:13
+        //here boolean true is 1 so output is 12+1 is called 13
+        document.write("</br>");
+        document.write(12-true);//output:11
+        //here boolean true is 1 so output is 12-1 is called 11
+        document.write("</br>");
+        document.write(true-12);//output:-11
+        //here boolean true is 1 so output is 12-1 is called 11
+        document.write("</br>");
+    </script>
+    <!--Implesit Conversion starts here --> 
+
+     
+     <!--explisit Conversion starts here-->
+    <script>
+        //-------------Explisit (Number) starts here-------------//
+        var x = "java"
+        var y = "6";
+        document.write(x + ":" +typeof(x));//output:java:string
+        document.write("</br>");
+        document.write(y + ":" +typeof(y));//output:6:string
+        document.write("</br>");
+        document.write(Number("sddsdsd"));//output:NaN
+        document.write("</br>");
+        document.write(Number(x));//output:NaN
+        document.write("</br>");
+        document.write(Number(y));//output:6
+        document.write("</br>");
+        var z =Number(y);
+        document.write("</br>");
+        document.write(typeof(z));//output:number
+        document.write("</br>");
+        document.write(typeof(y));//output:string
+        document.write("</br>");
+        document.write(Number("34jd"));//output:NaN
+        document.write("</br>");
+        document.write(parseInt("34jd"));//output:34
+        //here parseInt propery checks the interger values it shows 34
+        document.write("</br>");
+        document.write(parseInt("j34jd"));//output:NaN
+        //here first one is not a digit so it wont show integer
+        document.write("</br>");
+        document.write(parseFloat("34.677jd"));//output:34.667
+        document.write("</br>");
+        document.write(parseFloat("k34.677jd"));//output:NaN 
+        document.write("</br>");
+        document.write(parseInt("34.677jd"));//output:34(its shows only integer values)
+        document.write("</br>");
+        document.write("</br>");
+        document.write("</br>"); 
+        //-------------Explisit (Number) ends here-------------//
+        
+        //-------------Explisit (String) starts here-------------//
+          var u = 89
+          document.write(typeof(u));//output:number
+          document.write("</br>");
+            u  = String(u);
+          document.write(typeof(u));//output:string
+          document.write("</br>");
+          document.write("</br>");
+          var v = 90
+          document.write(typeof(w))
+          v = Number(null);//output:0
+          document.write("</br>");
+          v = String(Boolean);
+          document.write(v)
+          document.write("</br>");
+          //-------------Explisit (String) ends here-------------//
+          document.write("</br>");
+          document.write("</br>");
+          var q = Boolean(6)//output:true
+          document.write("</br>");
+          document.write(q);
+          var q1 = Boolean(-6)//output:true
+          var q2 = Boolean(6.678)
+          var q3 = Boolean(-6.768)
+          //without  0 any number it called is true
+         document.write(q1);//output:true
+         document.write("</br>");
+         document.write(q2);//output:true
+         document.write("</br>");
+         document.write(q3);//output:true
+         document.write("</br>");
+
+         var a = Boolean("");
+         document.write(a);//output:false
+         var a1 = Boolean("gvhb");
+         document.write("</br>");
+         document.write(a1);//output:true
+
+         var a2 = Boolean(7);
+         document.write("</br>");
+         document.write(a2);//output:true
+
+         var a2 = Boolean(null);
+         document.write("</br>");
+         document.write(a2);//output:false
+
+         var a3 = Boolean(0);
+         document.write("</br>");
+         document.write(a3);//output:false
+
+         //here Boolean null,""(empty couts),0 is shows output false
+         //here value or text any thing its shows output true
+          //-------------Explisit (Boolean) starts here-------------//
+    </script>
+     <!--explisit Conversion ends here-->
+</body>
+</html>

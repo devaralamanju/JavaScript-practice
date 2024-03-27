@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reduce method</title>
+</head>
+<body>
+    
+    <script>
+        //arrname.reduce(function,accumulator default value)
+
+        //function can take 4 arguments
+
+        //function(acc value.ele.index,array)
+
+        //arr.reduce(function(acc,ele,index,array){},8)
+
+        //this method returns a single value
+
+        var arr = [7,9,8,10,20,78]
+        var maxvalue = arr.reduce(function(acc,ele){
+            if(acc>ele){
+                return acc;
+            }
+            else{
+                return ele
+            }
+        },arr[0]
+        )
+        console.log(maxvalue);
+
+
+        
+        var arr = [7,9,8,10,20,78]
+        var maxvalue = arr.reduce(function(acc,ele){
+           return acc+ele;
+        },arr[0]
+        )
+        console.log(maxvalue);
+        console.log(arr);
+        //1st iteration:acc = 0 ele =7
+        //2nd iteration : acc = 7 ele =9; 7+9=16
+        //3rd iteration : acc = 16 ele = 8, 16+6=24
+        //4th ireartion : acc = 24 ele = 10; 24+10=34
+        //5th iteration : acc = 34 ele = 20; 34+20=54
+        //6th iteration : acc = 54 ele = 78; 54+78=134
+        //7th iteration : acc = 134
+
+
+        /*Arrow method using function place starts here*/
+        var arr = [7,9,8,10,20,78]
+        var sum = arr.reduce((acc,ele)=>{return acc+ele}, 0)
+        console.log(sum);//output:132
+
+        var arr = [7,9,8,10,20,78]
+        var sum = arr.reduce((acc,ele)=>acc+ele, 0)
+        console.log(sum);//output:132
+
+        var arr = [7,9,8,10,20,78]
+        var sum = arr.reduce(acc=>acc, 0)//suppose if are using single argunments passing in function then directly use without perantasis
+        console.log(sum);
+    </script>
+</body>
+</html>

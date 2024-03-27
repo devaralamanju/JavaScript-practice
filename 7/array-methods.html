@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">bhasdbajb</p>
+    <h3>Array Methods</h3>
+    <ul>
+        <li>length</li>
+        <li>push()</li>
+        <li>unshift()</li>
+        <li>pop()</li>
+        <li>shift()</li>
+        <li>splice()</li>
+        <li>toString()</li>
+        <li>at()</li>
+        <li>join()</li>
+        <li>delete()--not done</li>
+        <li>concat()--not done</li>
+        <li>copyWithin()</li>
+        <li>flat()</li>
+        <li>forEach()</li>
+        <li>slice()--not done</li>
+        <li>toSpliced()--not done</li>
+    </ul>
+    <script>
+        var ar1 = [12,13,34,56];
+        var ob1 = {"name":"praveen", "age":35}//object constructor function
+
+        var ob2 = [33,44,55,66];//array object of array constructor function
+
+        //push method starts here
+        var array1 = [12,33,44,55,66];
+        array1.push(99);//99 added to last digit
+        console.log(array1);//output:[12,33,44,55,66,99]
+
+         //pop method starts here
+         var array2 = [12,33,44,66,88];
+        array2.pop();//remove last element
+        console.log(array2);//output:[12,33,44,66]
+
+        //unshift method starts here
+        var array3 = [12,33,44,55,66];
+        array3.unshift();//add first element
+        console.log(array3);//output:[12,33,44,55,66]
+
+        //shift method starts here
+        var array4 = [12,33,44,66,88];
+        array4.shift(55);//remove first element 
+        console.log(array4);//output:
+
+        //splice method starts here
+        var array5 = [12,23,34,45,88];
+        array5.splice(2,2,55);//3 arguments//first argument count the index  // second argument place remove how many elements from first index after//from remove elements place we are  added the 3rd element
+        console.log(array5);//output:[12,23,55,88]
+
+       //length method starts here
+       var array6 = [12,23,34,45,56];
+       array6.length;
+       console.log(array6);//output:5
+
+        //toString() starts here
+        var array7 = ["apple","banana","custed apple","grapes"];
+        array7.toString();//The JavaScript method toString() converts an array to a string of (comma separated) array values.
+        document.write(array7);
+
+        //at() starts here
+        const fruits = ["yes", "no", "up", "delow"];
+        let fruit = fruits.at(2);
+        document.getElementById("demo").innerHTML = fruit;
+
+        document.write("<br>");
+        var fruits2 = [2,3,4,5,6,7];
+        var fruit2 = fruits2.at(2);//find the index it starts 0 index
+        document.write(fruit2); 
+
+        document.write("<br>");
+
+        var fruits2 = [2,3,4,5,6,7];
+        var fruit2 = fruits2[1];//find the index it starts 0 index
+        document.write(fruit2); 
+
+        document.write("<br>");
+
+        //join() starts here
+        var array9 = [15,25,35,45,65,75];
+        joincheck = array9.join("*");//adding all indexes after new element adding
+        document.write(joincheck);
+
+        //concat() starts here
+        const myGirls = ["Cecilie", "Lone"];
+        const myBoys = ["Emil", "Tobias", "Linus"];
+        const myChildren = myGirls.concat(myBoys);//adding of 2 arrsy
+        document.write(myChildren);
+
+        
+        var girls = ["ma","maha","jhanson"];
+        var nickname = ["ammulu","chichu"];
+        var realname = ["manju","manjula"]
+        var fullname = girls.concat(nickname,realname);//adding of 3 arrays
+        console.log(fullname);
+
+        //copyWithin() starts here
+       
+        //flat() starts here
+        var array11 = [[1,2],[2,3],[4,5]];
+        array11.flat();//adding subarray to single array
+        document.write(array11);
+
+
+       //forEach method starts here
+       var array8 = [12,23,34,45,56,7,54,43,21];
+       array8.forEach(function(){//call back function
+        console.log("new call back function");
+       });
+
+       var array7 = [12,23,34,45,56,7,54,43,21];
+       array7.forEach(function(a){//first argument
+        console.log("new call back function",a);//element with text
+       });
+
+       var array7 = [12,23,34,45,56,7,54,43,21];
+       array7.forEach(function(a,b){//second argument
+        console.log("new call back function",a,b);//b is index
+       });
+
+       var array7 = [12,23,34,45,56,7,54,43,21];
+       array7.forEach(function(a,b,c){//third argument
+        console.log("new call back function",a,b,c);//c is complete array
+       });
+   
+
+       //print event numbers
+       var array7 = [12,23,34,45,56,7,54,43,21];
+       array7.forEach(function(a,b,c){
+        if(a%2==0){
+            console.log(a);//output:12,34,56,54
+        }
+       });
+        
+       //(or)
+
+       for(i=0;i<=array7.length;i++){
+        if(array7[i]%2==0){
+            console.log(array7[i]);//output:12,34,56,54
+        }
+       }
+       
+
+       //slice starts here
+       var array12= [10,20,30,40,50];
+      let manju= array12.slice(2);//remove first elements
+        console.log(manju);
+        
+        document.write("</br>");
+
+       
+
+       console.log(typeof(document));//object
+       console.log(typeof(Document));//constructor function
+
+       console.log(document);//document open complete html
+       console.dir(document);
+       console.dir(Document);//fucntion
+
+
+        //delete() starts here
+        var arra10 = [10,20,30,40,50];
+        arraydelete = arra10.delete();
+        console.log(arraydelete);
+    </script>
+</body>
+</html>

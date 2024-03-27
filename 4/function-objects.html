@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //objects literal way
+        var e1 = {
+            name : "praveen",
+            age : "26",
+            location : "pune",
+            occupation : "ui",
+            qualification: "btech",
+            experience : "3"
+        }//e1 is an object
+        var e2 = {
+            name : "madhu",
+            age : "25",
+            location : "pune",
+            occupation : "java",
+            qualification: "btech",
+            experience : "2"
+        }
+
+        //
+        function employee(n,a,l,o,q,e){
+            this.name=n;
+            this.age=a;
+            this.location=l;
+            this.occupation=o;
+            this.qualification=q;
+            this.experience=e;
+        }//constructor functions
+        var emp1 = new employee("ramesh",36,"hyderabad","managment","masterts",3);//these are entities
+        var emp2 = new employee("suresh",26,"hyderabad","managment","masterts",12);
+        
+        function student(n){
+            var studentname=n;
+            this.age=a;
+        }
+        var s1 = new student("surya",34);
+        console.log(emp1,e1);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>The const declaration creates an immutable reference to a value. It does not mean the value it holds is immutable — just that the variable identifier cannot be reassigned. For instance, in the case where the content is an object, this means the object's contents (e.g., its properties) can be altered. You should understand const declarations as "create a variable whose identity remains constant", not "whose value remains constant" — or, "create immutable bindings", not "immutable values".</p>
+
+        <p>Many style guides (including MDN's) recommend using const over let whenever a variable is not reassigned in its scope. This makes the intent clear that a variable's type (or value, in the case of a primitive) can never change. Others may prefer let for non-primitives that are mutated.
+        
+        </p>
+    <p>The const declaration declares block-scoped local variables. The value of a constant can't be changed through reassignment using the assignment operator, but if a constant is an object, its properties can be added, updated, or removed.</p>
+    <ul>
+        <li>const declarations are scoped to blocks as well as functions.</li>
+        <li>const declarations can only be accessed after the place of declaration is reached (see temporal dead zone). For this reason, const declarations are commonly regarded as non-hoisted.</li>
+        <li>const declarations do not create properties on globalThis when declared at the top level of a script.</li>
+        <li>const declarations cannot be redeclared by any other declaration in the same scope.</li>
+        <li>const begins declarations, not statements. That means you cannot use a lone const declaration as the body of a block (which makes sense, since there's no way to access the variable).</li>
+    </ul>
+    <script src="const.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="margin-bottom: 20px;">
+        <p>Arrow functions allows a short syntax for writing function expressions.</p>
+        <p> You don't need the function keyword, the return keyword, and the curly brackets.</p>
+        <p>Arrow functions do not have their own this. They are not well suited for defining object methods.</p>
+
+        <p>Arrow functions are not hoisted. They must be defined before they are used.</p>
+            
+        <p>Using const is safer than using var, because a function expression is always a constant value..</p>
+            
+        <p> You can only omit the return keyword and the curly brackets if the function is a single statement. Because of this, it might be a good habit to always keep them:</p>
+    </div>
+
+    <script>
+       
+
+        function oldversion(){
+            console.log("oldervesion");
+        }
+        oldversion();//output:oldervesion
+
+
+        const newversion = () =>{
+            console.log("newversion");
+        }
+        newversion()//output:newversion
+        
+
+
+        function oldversion(number1){
+           return number1+50
+        }
+        console.log(oldversion(70));//output:120
+        
+        const newversion1 = (num1,num2) => {
+            return num1+num2;
+        }
+        console.log(newversion1(10,20))//output:30
+
+
+        const newversion2 = (num3,num4)=> num3+num4
+        console.log(newversion2(150,23))//output:173
+
+
+        const newversion4 = num1 => num1
+        console.log(newversion4(30))//output:30
+
+        const newversion5 = num1 => num1+20
+        console.log(newversion5(30))//output:50
+
+
+          /**Arrow function starts here **/
+        //ES5
+        var z = function(z, y) {
+        return z * y;
+        }
+        //ES6
+        const z = (z, y) => z * y;
+
+        
+        const z = (z, y) => { return z * y };
+        /**Arrow function ends here **/
+    </script>
+</body>
+</html>

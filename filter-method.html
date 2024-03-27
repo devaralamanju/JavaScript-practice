@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p>suppose forloop,forof and forin we can use but for forloop,forof and forin number of lines of code we have to write so that we can use filter</p>
+    <script>
+        var nums = [8,9,89,4,69,9];
+       var evennum = nums.filter(function(ele){
+            return ele%2==0;
+        })
+        console.log(nums);
+        console.log(evennum);
+
+
+        var nums = [8,9,89,4,69,9];
+       var evennum = nums.map(function(ele){
+            return ele%2==0;
+        })
+        console.log(nums);
+        console.log(evennum);
+    </script>
+</body>
+</html>

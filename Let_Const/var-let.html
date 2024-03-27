@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    console.log("hello world");//output:hello world
+
+var x;
+console.log(x);//output:undefined
+
+
+var x=100;
+console.log(x);//output:100
+console.log(typeof(x));//output:number
+
+/*Type of x defined*/
+x="manjula";
+console.log(x);//output:manjula
+console.log(typeof(x));//output:string
+/*Type of x defined end */
+
+/*Example start*/
+for(var i=0;i<=10;i++)
+{
+    console.log(i)//output:0 1 2 3 4 5 6 7 8 9 10
+}
+console.log(i)//output:11
+/*Example end*/
+
+/*Block level scope starts*/
+for(let i=0;i<=10;i++)
+{
+    console.log(i);//output:0 1 2 3 4 5 6 7 8 9 10 
+}
+console.log(i);//output:11
+/*Blocklevl scope ends*/
+
+
+/*var and let diffenrce starts*/
+var x;
+let y;
+{
+    var z=199;
+    let w=133;
+    console.log(z);//output:199
+    console.log(w);//output:133
+}
+console.log(z);//output:199
+console.log(w);//output:w is not defined
+
+/*var and let diffenrce end*/
+
+/*let example start*/
+if(10<30){
+    let p=99;
+}
+console.log(p);//output:undefined(p is not defined)
+//Output : error
+/*let example end*/
+
+/*var example start*/
+if(10<30){
+    var p=99;
+}
+console.log(p);//output:99
+/*var example end*/
+
+
+
+   </script>
+</body>
+</html>

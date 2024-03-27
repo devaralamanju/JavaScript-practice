@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>The global <b>setTimeout() </b>method sets a timer which executes a function or specified piece of code once the timer expires.</p>
+    <p><strong>Styntax</strong></br>
+        setTimeout(() => {
+        </br>
+    </br>
+        }, timeout);
+    </p>
+    <ul>
+        <li>setTimeout(code)</li>
+        <li>setTimeout(code, delay)</li>
+        <li>setTimeout(functionRef)</li>
+        <li>setTimeout(functionRef, delay)</li>
+        <li>setTimeout(functionRef, delay, param1)</li>
+        <li>setTimeout(functionRef, delay, param1, param2)</li>
+        <li>setTimeout(functionRef, delay, param1, param2, /* …, */ paramN)</li>
+    </ul>
+    <script>
+        setTimeout(function(){
+            alert("function called");
+        },3000);
+        console.log("hello")//output:hello
+
+           setTimeout(function(name){
+            alert("hello"+name);
+        },3000,"xyz");
+        console.log("hello");//alert coming aafer output:hello
+
+
+        
+        var x= setTimeout(function(name){
+            alert("hello"+name);
+        },3000,"xyz");
+        console.log("hello");//output:hello
+        console.log(x);//output:3
+
+     
+        var x= setTimeout(function(name){
+            alert("hello"+name);
+        },3000,"xyz");
+        console.log("hello");
+        clearInterval(x);
+        console.log(x);
+        var x= setTimeout(test,3000,"xyz");//test is called call back function
+        console.log("hello");
+        console.log(x);
+        function test(name){
+            alert("hello"+name);
+        }//setTimeout ends here
+
+
+        var counter = 1;
+        var x= setInterval(test,3000,"xyz");//test is called call back function
+        console.log(x);
+        function test(name){
+            alert("called :" +counter);
+            counter++;
+        }//counter increased in alert 
+
+        var counter = 1;
+        var x= setInterval(test,3000,"xyz");//test is called call back function
+        console.log(x);
+        function test(name){
+            alert("called :" +counter);
+            counter++;
+            if(counter==4){
+                clearInterval(x);
+            }
+        }//counter increased in alert 
+
+       
+        var x = setTimeout(function(name){
+            console.log(x+name);//output:1
+        },3000,"manjula");
+        console.log(x);//output:1manjula
+
+          
+        var x = setTimeout(test,3000,"xyz");
+        console.log(x);//3
+        function test(){
+            console.log("hello");//ouput:hello
+        }
+
+        var x = setInterval(function(name){
+            console.log(x+name);//output:1
+        },3000,"manjula");
+        clearInterval(x);
+        console.log(x);//output:1manjula//output repeated count
+        
+        //**04-03-2024**/
+        setTimeout(() => {
+            console.log("firstmssg")//output:firstmssg
+        }, 1000);
+        setTimeout(() => console.log("this is second mssg"),2000);//output:this is second mssg
+
+        for(var i=0;i<=5;i++){
+            console.log("check point");//6 checkout point
+            setTimeout(() => console.log(i),1000);//6 5 5 5 5 5
+        }
+
+        for(var i=0;i<=5;i++){
+            let j = i;
+            setTimeout(() => console.log(j),1000+j);
+        }//output:0
+            // 1
+            // 2
+            // 3
+            // 4
+
+        for(let i=0;i<=5;i++){
+            setTimeout(() => console.log(i),1000+i);
+        }//output:0
+            // 1
+            // 2
+            // 3
+            // 4
+
+        //**04-03-2024**/
+
+    
+
+    </script>
+    
+</body>
+</html>

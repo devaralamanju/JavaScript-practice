@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="d1">hello manjula</h1>
+    <input type="text" id="t1">
+    <button onclick="abc()">click</button></br>
+
+    <input type="text" id="t2">
+    <button onclick="xyz()">click</button></br>
+
+    <input type="text" id="t3">
+    <button onkeyup="ghf()">click</button>
+    <script>
+        var x = document.getElementById("d1");
+    //    console.log(x);
+        x.innerHTML="new name lakshi manjula";
+
+
+        function abc(){
+            var x = document.getElementById("t1");
+           console.dir(x);
+        }
+
+        
+        function xyz(){
+            var y = document.getElementById("t2");
+           console.dir(y.value);
+        }
+
+        function ghf(){
+            var z = document.getElementById("t3")
+            console.log(z.value);
+        }
+    </script>
+</body>
+</html>

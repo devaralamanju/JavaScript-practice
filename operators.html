@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>for operators having presedent rules </p>
+    <p>Binary operator we need 2 inputs</p>
+    <p>unary operator we need 1 input</p>
+    <p>Tenary operator we need 3 inputs</p>
+    <script>
+        //Arithematic operators
+        var a = 67;
+        var b = 3;
+        document.write(a+b);//output:70
+
+        document.write("</br>");
+
+        var c = "java";
+        var d = "script";
+        document.write(c+d);//output:javascript
+
+        document.write("</br>");
+
+        var x = 6;
+        var y = 7;
+        var z = "script";
+        var w ="java";
+        document.write(x+y+z);//output:13script
+        document.write("</br>");
+        document.write(x+w+z+y);//output:6javascript7
+        console.log(x+z+y);//output:
+
+        document.write("</br>");
+
+        document.write("</br>");
+        document.write(++x); //output:7
+
+        document.write("</br>");
+        document.write("<b>Comaprision operator</b>");
+        document.write("</br>");
+        //Comparision operators
+        var a = 6;
+        var c = 7;
+        var b = 6;
+        var d = "d";
+        document.write(a==b);//output:true
+        document.write("</br>");
+        document.write(a==c);//output:false
+        document.write("</br>");
+        document.write(a + "==" + b + ":" + (a+b)) ;//output:6==6:12
+        document.write("</br>");
+        document.write(a + "==" + b + ":" + a+b) ;//output:6==6:66
+        document.write("</br>");
+        document.write(a + "==" + b + ":");
+        document.write(a==b);//output:6==6:true
+
+        document.write("</br>");
+        document.write(a + "==" + b + ":");
+        document.write(a!=b);//output:6==6:false
+
+        document.write("</br>");
+        document.write(a + "!=" + c + ":");
+        document.write(a<c);//output:6!=7:true
+
+        document.write("</br>");
+        document.write(a + ">" + c + ":");
+        document.write(a>c);//output:6>7:false
+
+        document.write("</br>");
+        document.write(a + "<" + c + ":");
+        document.write(a<c);//output:6<7:true
+
+        document.write("</br>");
+        document.write(a + "==" + b + ":");
+        document.write(a==b);//output:6==6:true
+
+        document.write("</br>");
+        document.write(a + "===" + b + ":");
+        document.write(a==+b);//output:6===6:true
+        document.write("</br>");
+
+        
+        //Example
+        if(x!=0)
+            result =y/x;
+        else 
+            result ="not defined";
+
+
+        //Logical operators
+        var p = 5;
+        var q = 6;
+        var r = true;
+        var s ="java";
+        var t = 6;
+        document.write(p&&q);//output:false
+        document.write("</br>");
+
+        document.write((p>q) && (p<q) );
+        document.write("</br>");//output:false
+
+        document.write((5>3) && (4<6) );
+        document.write("</br>");//output:true
+
+        document.write((5<3) && (4<6) );
+        document.write("</br>");//output:false
+
+        document.write((5>3) || (4<6) );
+        document.write("</br>");//output:true
+
+        document.write((5<3) || (4<6) );
+        document.write("</br>");//output:true
+
+        document.write(!(5<3));//output:true
+        document.write("</br>");
+
+        document.write(!true);//output:false
+        document.write("</br>");
+
+
+
+        //Assignment opertor
+        document.write("Assignment opertor");
+        var a = 6;
+        var b = 4;
+        
+        document.write(a += b);
+        document.write("</br>");
+
+        document.write(2 ** 3);//power opertor
+        document.write("</br>");
+
+    
+   </script>
+
+   <script>
+    //Ternary Operator starts here
+        var big;
+        var a =9;
+        var b = 8;
+        //big = a>b?a:b;//output:8
+        //big =a>b?a*5:b*2;//output:45
+        a>b?document.write("a is big"):document.write("b is big");//output:a is big
+        document.write(big);
+    //Ternary Operator ends here
+   </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><strong>Def:</strong></h1>
+    <p style="font-size:16px;">Object is collection of properties and methods</p>
+
+    <h2>Objects are 2</h2>
+    <ul>
+        <li>document</li>
+        <li>window</li>
+    </ul>
+    <p>it is in browser</p>
+    <p>when we load page the window object and document object are created it self</p>
+
+    <p>To group the data under a single variable</p>
+    <p>this for loop repeats the block of code for very key value pair</p>
+    <script>
+        var a = 100;
+        console.log(++a);
+        console.log(a++);
+        console.log(100 + "10");//output:10010
+        console.log("100" + 10);//output:10010
+        console.log("100" - 10);//output:90
+        console.log("100" * 10 * "10");//output:1000
+        var x = 100;//number literals
+        var firstname = "manjula";//string literals
+        var latname = "devarala";
+
+        var person = {
+            firstname:"manjula",
+            lastname:"devaral"
+        }//object literals //JSON
+
+
+        var marks = [10,20,30,40]; //Array literals
+
+
+
+        //Example
+        var person = {
+            "firstname":"manjula",
+            "lastname":"devarala",
+            "dob":"12/05/1997",
+            "salary":"30000",
+            "location":"hyderabad",
+            "gender":"female"
+        }
+        var x = [23,34,59,60,78];
+        for(let i=0;i<=4;i++){
+            console.log(x[i])
+        }
+
+        for (j in person)
+        {
+            console.log("manimuntis");
+            console.log(j);
+            console.log(j,person[j])
+        }
+        
+    </script>
+    <script>
+        var persons = [
+            {
+                "firstname":"mallesh",
+                "lastname":"devararal",
+                "dob":"21/01/2001",
+                "salary":"nothing",
+                "location":"htderabad"
+            },
+            {
+                "firstname":"malli",
+                "lastname":"deva",
+                "dob":"21/01/2000",
+                "salary":"nothing",
+                "location":"htderabad"
+            },
+            {
+                "firstname":"maha",
+                "lastname":"devara",
+                "dob":"21/01/2002",
+                "salary":"nothing",
+                "location":"htderabad"
+            }
+        ]
+        
+      for(var i=0;i<=3;i++){// for array we can use for loop
+        for (j in persons[i]){//for object we can use forin loop 
+            console.log(j,persons[i][j]);
+        }
+      }
+    
+    </script>
+
+
+    <script>
+       console.log(document);//here we can see only html page
+        console.log(window);//here we can see all window realted information 
+        console.dir(document);//for checking functions and all we can seen in document
+    </script>
+
+</body>
+</html>

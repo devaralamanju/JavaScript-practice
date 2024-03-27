@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Javascript Events</h2>
+    <h2>Some of HTML Events</h2>
+    <ul>
+        <li>Mouse events</li>
+        <li>Keyboard events</li>
+        <li>Form events</li>
+        <li>Body events</li>
+        <li>Window/Document events</li>
+    </ul>
+
+    <h2>Mouse Events</h2>
+   <ol>
+    <li>onclick</li>
+    <li>ondblclick</li>
+    <li>onmouseover</li>
+    <li>onmouseout</li>
+    <li>onmousemove</li>
+    <li>onmouseup</li>
+    <li>onmousedown</li>
+    </ol>
+
+    <button onclick="clicktext()">on click</button>
+    <button ondblclick="clicdblk()">on double click</button>
+    <button onmouseover="clickmouseover()">on mouse over click</button>
+    <button onmouseout="clickmouseout()">on mouse out click</button>
+    <button onmouseout="clickmousemove()">on mouse move click</button>
+    <button onmouseup="clickmouseup()">on mouse up click</button>
+    <button onmousedown="clickmousedown()">on mouse down click</button>
+
+    <h2>Keyboard Events</h2>
+    <ol>
+     <li>onkeydown </li>
+     <li>onkeyup</li>
+     </ol>
+
+    <button onclick="onkeyup()">on keyup</button>
+    <button onclick="onkeydown()">on keydown</button>
+
+    <script>
+        //Mouse events starts here
+        function clicktext(){
+          alert("on click text");
+        }
+        function clicdblk(){
+          alert("on double click text");
+        }
+        function clickmouseover(){
+          alert("on mouse over click");
+        }
+        function clickmouseout(){
+          alert("on mouse out click");
+        }
+        function clickmousemove(){
+          alert("on mouse move click");
+        }
+        function clickmouseup(){
+          alert("on mouse up click");
+        }
+        function clickmousedown(){
+          alert("on mouse down click");
+        }
+        //Mouse events ends here
+
+        //keyboard events starts here
+        function keyup(){
+            alert("key up");
+        }
+        function keydown(){
+            alert("key down");
+        }
+        //keyboard events ends here
+    </script>
+</body>
+</html>

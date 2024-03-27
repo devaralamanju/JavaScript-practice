@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array methods</title>
+</head>
+<body>
+    <h3><strong>Every</strong></h3>
+    <p>function(a,b,c)--here a indicates array values,b indicates index, c indicates complete array</p>
+    <script>
+        /**----Every method starts here-----**/
+        var x = [12,23,34,45,56,67];
+        var k = x.every(function(a,b,c){
+            console.log("hello",a,b,c);
+            return true;
+        })
+        console.log(k)
+
+        var w = [12,23,34,45,56,67];
+        var z = w.every(function(a,b,c){
+            console.log("hello",a,b,c);
+            if(a==34){
+                return false;
+            }
+            return true;
+        })
+        console.log(w)
+
+        var y = [12,23,34,45,'pp',56,67];
+        var q = y.every(function(a,b,c){p
+            //if(a==NaN){
+                if(isNaN(a)){
+                return false;
+            }
+            return true;
+        })
+        console.log(y)
+        /**----Every method ends here-----**/
+        var ad = [10,9,98,87,89];
+        var b = ad.forEach(function(a){
+            console.log(a);
+        })
+    </script>
+</body>
+</html>

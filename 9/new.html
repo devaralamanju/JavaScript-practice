@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>This is my Home page</h1>
+    <a href="http://isolvet.in/demos/anugulardemo.html">a link to get angulardemo</a>
+    <span onclick="abc()">get the angular demo using ajax</span>
+    <script>
+        function abc(){
+            var http = new XMLHttpRequest();
+            console.log(http.readyState);
+            console.dir(http);
+            http.onreadystatechange =  function(){
+                console.log(http.readyState);
+            }
+            http.open("GET","http://isolvet.in/demos/anugulardemo.html")//parameter
+            http.send();//actual request sent
+        }
+    </script>
+</body>
+</html>

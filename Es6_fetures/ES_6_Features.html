@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES_6_Features</title>
+</head>
+<body>
+    <div style="margin-bottom: 20px;">
+        <h4 style="margin-bottom: 0;">Let</h4>
+        <div><p style="margin:0;">The <u>let</u> keyword allows you to declare a variable with block scope.</p></div>
+    </div>
+    <div style="margin-bottom: 20px;">
+        <p>The const declaration creates an immutable reference to a value. It does not mean the value it holds is immutable — just that the variable identifier cannot be reassigned. For instance, in the case where the content is an object, this means the object's contents (e.g., its properties) can be altered. You should understand const declarations as "create a variable whose identity remains constant", not "whose value remains constant" — or, "create immutable bindings", not "immutable values".</p>
+        <p>Many style guides (including MDN's) recommend using const over let whenever a variable is not reassigned in its scope. This makes the intent clear that a variable's type (or value, in the case of a primitive) can never change. Others may prefer let for non-primitives that are mutated.
+        </p>
+    <p>The const declaration declares block-scoped local variables. The value of a constant can't be changed through reassignment using the assignment operator, but if a constant is an object, its properties can be added, updated, or removed.</p>
+    <ul>
+        <li>const declarations are scoped to blocks as well as functions.</li>
+        <li>const declarations can only be accessed after the place of declaration is reached (see temporal dead zone). For this reason, const declarations are commonly regarded as non-hoisted.</li>
+        <li>const declarations do not create properties on globalThis when declared at the top level of a script.</li>
+        <li>const declarations cannot be redeclared by any other declaration in the same scope.</li>
+        <li>const begins declarations, not statements. That means you cannot use a lone const declaration as the body of a block (which makes sense, since there's no way to access the variable).</li>
+    </ul>
+    </div>
+    <div style="margin-bottom: 20px;">
+        <p>Arrow functions allows a short syntax for writing function expressions.</p>
+        <p> You don't need the function keyword, the return keyword, and the curly brackets.</p>
+        <p>Arrow functions do not have their own this. They are not well suited for defining object methods.</p>
+
+        <p>Arrow functions are not hoisted. They must be defined before they are used.</p>
+            
+        <p>Using const is safer than using var, because a function expression is always a constant value..</p>
+            
+        <p> You can only omit the return keyword and the curly brackets if the function is a single statement. Because of this, it might be a good habit to always keep them:</p>
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        The ... operator can be used to expand an iterable into more arguments for function calls:
+    </div>
+
+    <div style="margin-bottom: 20px;">
+        <p>group of values using one name for representing is called <strong>Iterable</strong></p>
+        <p>iterable data types:strings and arrays , objects</p>
+        <p>each element of iterable for using forin or forof we can take</p>
+        <p></p>
+    </div>
+    <script>
+        /**Let starts here **/
+        let x = 10;
+        //console.log(x);//output:10
+
+        {
+            let x = 2;
+        }
+        console.log(x);//output:10
+        /**Let ends here **/
+
+        /**Arrow function starts here **/
+        // ES5
+        var z = function(z, y) {
+        return z * y;
+        }
+        // ES6
+        const z = (z, y) => z * y;
+
+        //
+        const z = (z, y) => { return z * y };
+        /**Arrow function ends here **/
+
+        /**Spread operator starts here **/
+        const q1 = ["Jan", "Feb", "Mar"];
+        const q2 = ["Apr", "May", "Jun"];
+        const q3 = ["Jul", "Aug", "Sep"];
+        const q4 = ["Oct", "Nov", "May"];
+
+        const year = [...q1, ...q2, ...q3, ...q4];//output:Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,May
+         //spread operator(...)  -->It takes an iterable and espands or separate each element of iterable
+
+         var arr = [78,89,90,67]
+        console.log(arr);
+        console.log(...arr);
+
+        var arr2 = [56,89,45,34,arr]
+        console.log(arr2);
+
+        
+        var arr3 = [56,89,45,34,...arr]
+        console.log(arr3);
+
+        var arr4 = [56,89,45,34,...arr]
+        var s1 = "javascript";
+        console.log(...s1);//output:j a v a s c r i p t//it separetes elements
+        console.log(s1);//output:javascript
+
+
+        var arr5 = [1,2,3,4,5]
+        var arr6 = [6,7,8,9]
+        var arr7 = [...arr5,...arr6]
+        console.log(arr7);//output:(9) [1, 2, 3, 4, 5, 6, 7, 8, 9] //individual elements
+   
+        var arr8 = [1,2,3,4,5]
+        var arr9 = [6,7,8,9]
+        var arr10 = [arr8,arr9]
+        console.log(arr10);//output:(2) [Array(5), Array(4)]
+
+
+        var arr11 = [1,2,3,4]
+        var arr12 = [7,8,9,3]
+        var arr13 = [...arr11,56,78,...arr12,63]
+        console.log(arr13);//output:(11) [1, 2, 3, 4, 56, 78, 7, 8, 9, 3, 63]
+
+
+        var arr14 = [1,2,3,4]
+        var arr15 = [7,8,9,3]
+        function add(a,b,c,d){
+            console.log(a+b+c+d)
+        }
+        add(...arr14);//output:10
+        
+        /**Spread operator ends here **/
+
+
+        /**forin and forof loop starts here**/
+        var fruits = ['apple', 'banana', 'grapes', 'orange', 'mango']
+        console.log(fruits)
+        for(index in fruits){
+            console.log(index + ":" +fruits[index] + "<br>") 
+        }
+        /**forin and forof loop ends here**/
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function special(){
+            var x = 100;
+            var y = 200;
+            function abc(){
+                x++;
+                console.log(y);
+            }
+            function xyz(){
+                console.log(x);
+            }
+        }
+        function pqr(){
+            console.log(x+y);
+        }
+        abc();//200
+        xyz();//101
+        pqr();//301
+
+
+        function student(f,l,a,d){
+            var x=34;//variable(private variable)
+            this.firstname=f;//property(public variable)
+            this.lastname=l;
+            this.gender=g;
+            this.dob=d;
+            var getFullName=function(){
+                console.log(firstname+lastname);
+            }
+           
+            console.log(getFullName());
+        }
+
+        var s1  = new student("praveen","gubbala","male","04/29/1983");
+        var s2  = new student("suresh","gubbala","male","03/20/1983");
+        
+        console.log(s1);
+        console.log(s2);
+   
+   </script>
+</body>
+</html>

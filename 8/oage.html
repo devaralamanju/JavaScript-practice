@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>this is index page</h1>
+    <a href="webdemo.html"></a>
+    <form action="webdemo.html">
+        <input type="text" name="username">
+        <input type="text" name="password">
+        <input type="submit">
+    </form>
+    <button onclick="abc()">Req through javascript</button>
+    <div id="edokati">
+
+    </div>
+    <script>
+        function abc(){
+            var http =new XMLHttpRequest();
+            console.log(http.readyState);
+            http.onreadystatechange = function(){
+                // console.log("ready state changed",http.readyState)
+                if(http.readyState==4){
+                    document.getElementById("edokati").innerHTML=http.response;
+                }
+            }
+            http.open("get","webdemo.html");
+            http.send();
+            console.dir(http);
+            
+        }
+    </script>
+</body>
+</html>

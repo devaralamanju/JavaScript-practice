@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map methods</title>
+</head>
+<body>
+    <p>map method creates new array</p>
+    <p>if we are using that array we can assign other name</p>
+    <script>
+        var birthyears = [1994,1996,2000,2004,2005,2015,2020];
+        var ages = birthyears.map(function(ele,index,arr){
+            let age = 2024-ele
+            return age;
+        })
+        console.log(birthyears);
+        console.log(ages);
+
+
+        var birthyears = [1994,1996,2000,2004,2005,2015,2020];
+        var ages = birthyears.map(ageFind)
+        function ageFind(ele,index,arr){
+            console.log(ele)
+            console.log(index)
+            let age = 2023-ele
+            return age;
+        }
+        console.log(birthyears);
+        console.log(ages);
+
+        
+        var birthyears = [1994,1996,2000,2004,2005,2015,2020];
+        var ages = birthyears.map(ageFind)
+        function ageFind(ele,index,arr){
+            // console.log(ele)
+            // console.log(index)
+            // let age = 2023-ele
+            return 1;
+        }
+        console.log(birthyears);
+        console.log(ages);
+
+
+        // function(ele,index,arr){
+        //     let age = 2024-ele
+        //     return age;
+        // }//anoysmyos function
+    </script>
+</body>
+</html>

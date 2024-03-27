@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x = [12,34,56,87,98];
+
+        console.log(x[3]);
+        for(let i=0;i<=5;i++){
+            console.log(i);
+        }
+
+        var y = [34,76,98,689,788];
+        var max = y[0];
+        for(let i=1;i<=4;i++){
+            if(max<x[i]){
+                max=x[i]
+            }
+        }
+        console.log(max);
+
+        for(i=1;i<=5;i++){
+            for(j=1;j<=5;j++){
+                document.write(i);
+            }
+            document.write("</br>");
+        }
+
+        for(i=1;i<=5;i++){
+            for(j=1;j<=5;j++){
+                document.write(j);
+            }
+            document.write("</br>");
+        }
+
+
+        for(i=1;i<=5;i++){
+            for(j=1;j<=5;j++){
+                if(i<=j){
+                document.write(j);
+                }
+            }
+            document.write("</br>");
+        }
+        
+        for(i=1;i<=5;i++){
+            for(j=1;j<=5;j++){
+                if(i<=j){
+                document.write(i);
+                }
+            }
+            document.write("</br>");
+        }
+
+        for(i=1;i<=5;i++){
+            for(j=1;j<=j;j++){
+                document.write(i);
+            }
+            document.write("</br>");
+        }
+    </script>
+</body>
+</html>

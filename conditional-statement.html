@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional statements</title>
+</head>
+<body>
+    <p>Types of conditional statements</p>
+    <ul>
+        <li>
+            if statement
+        </li>
+        <li>
+            if-else statement
+        </li>
+        <li>
+            if-else if -else statement
+        </li>
+        <li>
+            switch statement
+        </li>
+    </ul>
+    <script>
+        var a = prompt("Enter a number");
+        // document.write(a);
+
+        if(a<0){//only 0 is a false and empty string is false
+            alert("enter positive number");//if i am given input value -98 it shows output is enter positive number
+        }
+        alert("hello");
+
+        var b = prompt("enter a number");
+        if(b<0){
+          
+            alert("enter a positive number");
+            
+        }
+        else{
+            alert("you enteres " + b)
+        }
+        alert("hello")
+
+        var balence = 10000;
+        var amount = prompt("Enter a amount transfer");
+        if(amount<balence){
+            alert("before deduction:" + balence);
+            balence = balence-amount;
+            alert("deduction successfully");
+            alert("before deduction :" +balence)
+        }
+        else{
+        alert("your balence is :" +balence + "enter less than your amount")
+        }
+
+        var score = prompt("Enter marks");
+    </script>
+</body>
+</html>

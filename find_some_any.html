@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p><strong>Find def:</strong> find method satisifies only 1st array element</p>
+    <p>But filter 1 array shows how many elements satitified elements</p>
+    <p><strong>some def:</strong>some method similar to find method but only differne element value place to trur or false it shows( it also check first element of return consition)</p>
+    <p><strong>Every def: </strong>every method check each and every element returns true then only it returns true suppose if 1 element returns false it shows output false(it check each and every element statified condition then only return true pr false)</p>
+    <script>
+        //find method is called call back function
+        //It returns the first element of array for which call back function returns true
+
+        /**find() starts here **/
+        let places = ["Hyderabad","Vizag","Nellore","Tirupathi","Vijayavad"]
+        var place = places.find(function(ele,index,arr){//3 parameters we can pass but we are using only ele
+            return ele.startsWith("V");
+        })
+        console.log(place)//output:Vizag
+
+
+        let placesnew = ["Hyderabad","Vijayavad","Vizag","Nellore","Tirupathi"]
+        var place = placesnew.find(function(ele,index,arr){
+            return ele.startsWith("V");
+        })
+        console.log(place)//output:Vijayavad
+
+
+        
+
+        let placesnewsearch = ["Hyderabad","Vijayavad","Vizag","Nellore","Tirupathi"]
+        var place = placesnewsearch.find(function(ele,index,arr){//3 parameters we can pass but we are using only ele
+            return ele.startsWith("C");
+        })
+        console.log(place)//output:undefined
+
+
+        
+
+        let placesnewsearchs = ["Hyderabad","Vijayavad","Vizag","Nellore","Tirupathi"]
+        var place = placesnewsearchs.filter(function(ele,index,arr){//3 parameters we can pass but we are using only ele
+            return ele.startsWith("V");
+        })
+        console.log(place)//output:Vijayavad,Vizag(using filter)
+        /**find() ends here **/
+
+
+
+        /**sum() starts here **/
+        let placesumearch = ["Hyderabad","Vijayavad","Vizag","Nellore","Tirupathi"]
+            var place = placesumearch.some(function(ele){
+                return ele.startsWith("V");
+            })
+            console.log(place);//output: return only true
+        /**sum() ends here **/
+   
+
+        let marks = [76,67,87,54,89,90]
+        var pass = marks.every(function(marks){
+            return marks>35
+        })
+        console.log(pass)//output:true
+
+        let markset = [76,67,87,34,54,89,90]
+        var pass = markset.every(function(marks){
+            return marks>35
+        })
+        console.log(pass)//output:false
+
+         
+   </script>
+</body>
+</html>

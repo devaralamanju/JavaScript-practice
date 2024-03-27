@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //array
+        var x = [12,23,34,45];
+        console.log(x[3]);
+
+        //using for loop for array
+        var y = [12,13,14,45,65,76,98]
+        for(let i=0;i<=5;i++){
+            console.log(y[i]);
+        }
+
+        //maximum value from array
+        var z = [98,87,76,65,78,89];
+        var max = z[0];
+        for(let  j=1;j>=5;j++)
+        {
+            if(max<x[j]){
+                max=[j]
+            }
+        }
+        console.log(max)
+
+
+        //print even numbers in array
+
+        for(let j=0;j<=10;j++){
+            document.write(j);
+            document.write("</br>");
+        }
+
+        //print string
+        for(let i=0;i<=10;i++){
+            document.write("*");
+        }
+
+        //print output between space
+        for(let k=0;k<=10;k++){
+            document.write("</br>");
+            document.writeln(k);
+           
+        }
+
+        document.write("</br>");
+
+        //print 1234 1234 1234 1234
+        for(let i=1;i<=5;i++){
+            for(let j=1;j<=5;j++){
+                document.write(j);
+            }
+            document.write("</br>");
+        }
+
+        document.write("</br>");
+
+
+         //print 1111 2222 3333 4444 5555
+         for(let i=1;i<=5;i++){
+            for(let j=1;j<=5;j++){
+                document.write(i);
+            }
+            document.write("</br>");
+        }
+
+        document.write("</br>");
+
+        //print **** **** **** ***** *****
+          for(let i=1;i<=5;i++){
+            for(let j=1;j<=5;j++){
+                document.write("*");
+            }
+            document.write("</br>");
+        }
+        document.write("</br>");
+        //print 1 22 333 4444 55555
+        for(let i=1;i<=5;i++){
+            for(let j=1;j<=i;j++){
+                document.write(i);
+            }
+            document.write("</br>");
+        }
+
+        //print 1 12 123 1234 12345
+           for(let i=1;i<=5;i++){
+            for(let j=1;j<=i;j++){
+                document.write(j);
+            }
+            document.write("</br>");
+        }
+        document.write("</br>");
+
+        //print 11111 2222 333 44 5
+        for(i=1;i<=5;i++){
+            for(j=0;j<=5;j++){
+                if(i<=j){
+                    document.write(i);
+                }
+            }
+            document.write("</br>");
+        }
+
+        document.write("</br>");
+
+
+        //print 12345 1234 123 12 1
+        for(i=1;i<=5;i++){
+            for(j=1;j<=5;j++){
+                if(i<=j){
+                    document.write(j);
+                }
+            }
+            document.write("</br>");
+        }
+
+       
+         //print 1 12 123 1234 12345(Another method)
+        for(i=1;i<=5;i++){
+            for(j=1;j<=5;j++){
+                if(j<=i){
+                    document.write(j);
+                }
+            }
+            document.write("</br>");
+        }
+    </script>
+</body>
+</html>

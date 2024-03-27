@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //number
+        var x = 87;
+        var y = 423.432;
+        console.log(typeof(x));//output:number
+        console.log(typeof x);//output:number
+        console.log(typeof y);//output:number
+
+        //string
+        var z ='manju';//group of letters
+        var w ="manju";
+        var t = "xyz 'is'"; 
+        var u = 'xyz "is" ';
+        console.log(typeof z);//output:string
+        console.log(typeof w);//output:string
+        console.log(typeof t);//output:string
+        console.log(t);//output:xyz 'is'
+        console.log(typeof(u));//output:string
+        console.log(u);//xyz "is"
+
+        //boolean 
+        var b = false;
+        console.log(b);//output:false
+        console.log(typeof b);//output:boolean
+
+        var d = null;//nothing in that variable
+        console.log(d);//output:null
+
+        //array
+        var names = [12,23,45,67];
+        var num = ['xyz','abc','pqr'];
+        console.log(names);//output:12,23,45,65
+        console.log(num);//output: ['xyz', 'abc', 'pqr']
+        var efg = ['xyz','abc',true,67,null];
+        console.log(efg);//output:['xyz', 'abc', true, 67, null]
+        
+
+        //Objects
+        var obj = {
+            'name':"xyz",
+            'lastname':"devarala",
+            'designation':"ui developer",
+            'location':"hydearabad",
+            'age':26,
+            'married':false
+        }//group of key valu pairs
+        console.log(obj);//output:{name: 'xyz', lastname: 'devarala', designation: 'ui developer', location: 'hydearabad', age: 26, …}
+        
+        var ename = [
+        {
+            'name':"xyz",
+            'lastname':"devarala",
+            'designation':"ui developer",
+            'location':"hydearabad",
+            'age':26,
+            'married':false,
+            'land':null
+        },
+        {
+            'name':"abc",
+            'lastname':"deva",
+            'designation':"ui developer",
+            'location':"hydearabad",
+            'age':27,
+            'married':true
+        }
+        ]
+
+        console.log(ename);
+   </script>
+</body>
+</html>

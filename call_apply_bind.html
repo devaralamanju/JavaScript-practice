@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call_apply_bind</title>
+</head>
+<body>
+    <p><strong>Call def:</strong>for manuplating this keyword is called call</p>
+    <p>Example:syntax function name .call(obj,parameter1,parameter2)</p>
+    <p><strong>Apply def:</strong>for manuplating this keyword is called Apply</p>
+    <p>Example:syntax function name .Apply(obj,[parameter1],[parameter2])</p>
+    <script>
+    var salary =  2000;
+   
+    function getSalary(a,b){
+        console.log(this.salary);//output:2000
+        //console.log(window.salary);//output:2000
+        //console.log(salary);//output:2000
+        console.log(a,b)
+    }
+    // window.getSalary()//output:3000
+
+
+    employee = {
+        salary: 3000,
+    }
+    employee2 = {
+        salary:17000
+    }
+    //getSalary.call(employee,67,690)
+    //getSalary.call(employee2,37,69)
+
+    getSalary.apply(employee2,[65])
+
+    employee3 = {
+    salary : 5000
+}
+    var f1 = getSalary.bind(employee3,67,87);
+    f1();
+
+    </script>
+</body>
+</html>
